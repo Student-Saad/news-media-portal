@@ -89,16 +89,7 @@ Copy `.env.example` to `.env` in the project root:
 cp .env.example .env
 ```
 
-Then update the values:
 
-```env
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/news-portal
-JWT_SECRET=your_secure_jwt_secret
-NODE_ENV=development
-ADMIN_EMAIL=admin@newsportal.com
-ADMIN_PASSWORD=admin123
-```
 
 If you use MongoDB Atlas, replace `MONGODB_URI` with your Atlas connection string.
 
@@ -123,12 +114,7 @@ npm run dev -- --host 0.0.0.0
 The frontend runs on:
 - http://localhost:5173
 
-## Default admin account
 
-```text
-Email: admin@newsportal.com
-Password: admin123
-```
 
 ## Features
 
