@@ -1,0 +1,130 @@
+.navbar {
+  background: rgba(15, 23, 42, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-logo {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.navbar-logo:hover {
+  opacity: 0.9;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.96rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+  background: none;
+  border: none;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.register-btn {
+  background: linear-gradient(135deg, #f8fafc 0%, #dfeafc 100%);
+  color: #0f172a;
+  padding: 0.72rem 1.2rem;
+  border-radius: 999px;
+  box-shadow: 0 8px 16px rgba(148, 163, 184, 0.2);
+}
+
+.register-btn:hover {
+  opacity: 1;
+  color: #0f172a;
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.68rem 1.1rem;
+  border-radius: 999px;
+}
+
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0.9rem 1.1rem;
+  }
+
+  .navbar-menu {
+    gap: 0.7rem 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.9rem 1rem;
+  }
+
+  .navbar-menu {
+    justify-content: center;
+    gap: 0.75rem 0.9rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    position: static;
+  }
+
+  .navbar-container {
+    padding: 0.85rem 0.75rem;
+  }
+
+  .navbar-menu {
+    width: 100%;
+  }
+
+  .nav-link,
+  .register-btn,
+  .logout-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
